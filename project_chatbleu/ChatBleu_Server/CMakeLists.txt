@@ -1,9 +1,19 @@
 ﻿cmake_minimum_required (VERSION 3.8)
 
-project (project_chatbleu_server)
+project (CB_EXEC_Server)
 
 add_executable (${PROJECT_NAME} "main.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 endif()
+
+target_include_directories(${PROJECT_NAME}
+	PUBLIC
+		CB_SLIB_Network
+)
+
+target_link_libraries(${PROJECT_NAME}
+	PUBLIC
+		CB_SLIB_Network
+)

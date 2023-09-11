@@ -2,5 +2,7 @@
 
 project (project_chatbleu)
 
+add_subdirectory(ChatBleu_Network)
+
 add_subdirectory(ChatBleu_Client)
 add_subdirectory(ChatBleu_Server)
